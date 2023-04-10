@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn_1">
+        Показати
+    </button>
+    <button id="btn_2">
+        Сховати
+    </button>
+    <button id="btn_3">
+        Показати | Сховати
+    </button>
+
+    <img src="5.jpg" alt="" id="elem">
+
+    <script>
+        let btn_1 = document.querySelector('#btn_1');
+        let btn_2 = document.querySelector('#btn_2');
+        let btn_3 = document.querySelector('#btn_3');
+        let elem = document.querySelector('#elem');
+
+        btn_1.addEventListener("click", function () {
+            elem.classList.add('show');
+        });
+
+        btn_2.addEventListener("click", function () {
+            elem.classList.remove('show');
+        });
+
+        btn_3.addEventListener("click", function () {
+            elem.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
